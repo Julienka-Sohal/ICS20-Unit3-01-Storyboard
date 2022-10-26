@@ -19,14 +19,22 @@ if (navigator.serviceWorker) {
  * This function displays an alert.
  */
 function calculateClicked() {
-//input
-  const baseOneOfTrapezoid = parseInt(document.getElementById("base-one-of-trapezoid").value)
-  const baseTwoOfTrapezoid = parseInt(document.getElementById("base-two-of-trapezoid").value)
-  const heightOfTrapezoid = parseInt(document.getElementById("height-of-trapezoid").value)
-  
-//process
-  const areaOfTrapezoid = baseOneOfTrapezoid + baseTwoOfTrapezoid * heightOfTrapezoid / 2
+  //input
+  const baseOneOfTrapezoid = parseInt(
+    document.getElementById("base-one-of-trapezoid").value
+  )
+  const baseTwoOfTrapezoid = parseInt(
+    document.getElementById("base-two-of-trapezoid").value
+  )
+  const heightOfTrapezoid = parseInt(
+    document.getElementById("height-of-trapezoid").value
+  )
 
-//output
-  document.getElementById("area").innerHTML = "The area of this Trapezoid is " + areaOfTrapezoid.toFixed(2) + " cm²."
+  //process
+  const areaOfTrapezoid =
+    baseOneOfTrapezoid + (baseTwoOfTrapezoid * heightOfTrapezoid) / 2
+
+  //output
+  document.getElementById("area").innerHTML =
+    "The area of this Trapezoid is " + areaOfTrapezoid.toFixed(2) + " cm²."
 }
